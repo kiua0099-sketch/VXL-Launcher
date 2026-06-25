@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A"
+    android:keepScreenOn="true">
+
+    <!-- شعار VX المتوهج في المنتصف -->
+    <LinearLayout
+        android:id="@+id/logo_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VX"
+            android:textColor="#FF0000"
+            android:textSize="56sp"
+            android:fontFamily="serif"
+            android:textStyle="italic|bold"
+            android:shadowColor="#FF0033"
+            android:shadowRadius="15"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LAUNCHER"
+            android:textColor="#FF1E1E"
+            android:textSize="20sp"
+            android:letterSpacing="0.4"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- منطقة شريط التحميل السفلي ونسبة الـ 93% -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:paddingHorizontal="40dp">
+
+        <TextView
+            android:id="@+id/loading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOADING LAUNCHER..."
+            android:textColor="#99FFFFFF"
+            android:textSize="12sp"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- شريط التقدم باللون الأحمر الفخم -->
+        <ProgressBar
+            android:id="@+id/launcher_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:progress="93"
+            android:max="100"
+            android:progressDrawable="@android:drawable/progress_horizontal"
+            android:progressTint="#FF0000"
+            android:progressBackgroundTint="#22FFFFFF"/>
+
+        <TextView
+            android:id="@+id/progress_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="93%"
+            android:textColor="#FF1E1E"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- النصوص والروابط الجانبية الصغيرة في الأسفل -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Launcher / Fast"
+            android:textColor="#66FFFFFF"
+            android:textSize="11sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dm me: @kiualeo?"
+            android:textColor="#44FFFFFF"
+            android:textSize="11sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>
