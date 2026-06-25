@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">لانشر VX</string>
+    <string name="settings_title">الإعدادات</string>
+    <string name="ram_setting">تخصيص الذاكرة (ميغابايت):</string>
+    <string name="render_setting">محرك الراندر:</string>
+    <string name="nolag_setting">وضع منع اللاج (تسريع اللعبة)</string>
+    <string name="lang_setting">اللغة:</string>
+    <string name="btn_save">حفظ التغييرات</string>
+</resources>
+
