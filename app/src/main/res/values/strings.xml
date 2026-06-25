@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">VX Launcher</string>
+    <string name="settings_title">Settings</string>
+    <string name="ram_setting">RAM Allocation (MB):</string>
+    <string name="render_setting">Render Engine:</string>
+    <string name="nolag_setting">No Lag Mode (Boost FPS)</string>
+    <string name="lang_setting">Language:</string>
+    <string name="btn_save">Save Changes</string>
+</resources>
+
