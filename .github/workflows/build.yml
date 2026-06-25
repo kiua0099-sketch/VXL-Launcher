@@ -1,0 +1,36 @@
+name: VX Launcher Build Engine
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Source Code Base
+      uses: actions/checkout@v3
+
+    - name: Set up Modern Java Development Kit (JDK 17)
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'zulu'
+
+    # هذه الخطوة ستقوم بتوليد ملف الـ Wrapper والـ jar المفقود تلقائياً على السيرفر لتصليح الخطأ القديم!
+    - name: Initialize Local Android Directory Structure & Gradle Wrapper
+      run: |
+        gradle wrapper --gradle-version 8.0.2
+        chmod +x gradlew
+
+    - name: Compile and Build APK Android Application
+      run: ./gradlew assembleDebug --stacktrace
+
+    - name: Upload Finished Production APK Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: VX-Launcher-Beta
+        path: app/build/outputs/apk/debug/app-debug.apk
+        
